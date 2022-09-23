@@ -19,7 +19,7 @@ The main part of this project is a pipeline executing *most of the known deconvo
 
 The pipeline allows us to run all the possible combinations of set / methods / matrices with all the possible steps and Params.
 
-This is a *partial* list of the possible steps implemented in the project :
+This is a **partial** list of the possible steps implemented in the project :
 
 Data sets  ::############<br/>
 Data set : Artificial  mixtures<br/>
