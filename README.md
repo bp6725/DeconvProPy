@@ -8,7 +8,7 @@ This project is for internal usage of the Shan-Orr lab at the Technion.
 4) Some methods require an external process for running R code, so you need R on your pc.<br/>
 5) The "Archive" folder contains all the detailed results, the "dashboards" module can read those results and plot lots of beautiful figures.<br/>
 6) I will add an explanation for the "simulated data".<br/>
-7) This project contains 9399 lines of python code:) (as of today)  So if you have a question, better talk to me first. <br/>
+7) This project contains 9399 lines of python code :) (as of today)  So if you have a question, better talk to me first. <br/>
 
 
 
