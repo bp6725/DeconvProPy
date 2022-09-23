@@ -1,14 +1,15 @@
 EconvProPy
+
 This project is for internal usage of the Shan-Orr lab at the Technion.
 
 *Notice :<br/>
-1) This project doesn't cotein the raw data given the GIT storage limitations.<br/>
-2) This project was built to be generic, each one can add any algorithms to the pipe, just try to inherit from the right classes<br/>
+1) This project doesn't contain the raw data given the GIT storage limitations.<br/>
+2) This project meant to be generic, you can add any algorithm to the pipe, just try to inherit from the right classes and pandas api extensions<br/>
 3) The pipeline is *highly" cached. We have - 1) Tree cash - each "leaf" in the execution DAG is cached based on its predecessor and their params (that is, a small change in the higher leaves will make everything run again ). 2) E2E cache. <br/>
 4) Some methods require an external process for running R code, so you need R on your pc.<br/>
 5) The "Archive" folder contains all the detailed results, the "dashboards" module can read those results and plot lots of beautiful figures.<br/>
-6) I will add an explanation for the "simulated data".<br/>
-7) This project contains 9399 lines of python code :) (as of today)  So if you have a question, better talk to me first. <br/>
+6) I will add an explanation for the "simulated data". <br/>
+7) This project contains 9399 lines of python code :) (as of today), and its the largest source of deconvolution related algorithms. So if you have a question, better talk to me first ;) <br/>
 
 
 
@@ -52,7 +53,7 @@ Step name : clean irrelevant proteins(remove all zero genes) <br/>
 Step name : preprocess (finding signature) <br/>
 	Possible steps :  <br/>
 	Entropy based. Params : number of genes per cell, entropy to Zscore ratio, with/out normalization <br/> 
-	Entropy based only largest(pick only genes that are the highest for the specific cell) . Params : number of genes per cell, entropy to Zscore  <br/>ratio, with/out normalization  <br/>
+	Entropy, only largest(pick only genes that are the highest for the specific cell). Params : number of genes per cell, entropy to Zscore  <br/>ratio, with/out normalization  <br/>
 	Top quantile DE(instead of Anova). Params : quantile <br/>
 	Iterative feature selection .Params :  auto selected    <br/>      
 	No preprocess. <br/>
@@ -61,7 +62,7 @@ Step name : deconvolution  <br/>
 	Possible steps :  <br/>
 	basic deconvolution (none negative optimization ).Params : normalize / total counts <br/>
 	CellMix .Params : normalize / total counts <br/>
-  Robust linear reggresion. Params : [Todo: update readme] <br/>
+  Robust linear regression. Params : [Todo: update readme] <br/>
   Weak learners. Params : [Todo: update readme] <br/>
   Xcell. Params : None <br/>
   Generalized Estimating Equations. Params : [Todo: update readme] <br/>
@@ -78,7 +79,7 @@ Metric : mean correlation between deconvolution and Cytof  <br/>
 	Options :  <br/>
 	Correlation between the mixtures across cells. Params - with/out label propagation   <br/>
 	Correlation between the cells across mixtures. Params - with/out label propagation   <br/>
-	Per group correlation  - split the cells to two groups(high/low abundance) and measure separately. Params - with/out label propagation <br/>
+	Per group correlation  - split the cells into two groups(high/low abundance) and measure separately. Params - with/out label propagation <br/>
 	
 Metric : distance conservation between Cytof and deconvolution (the deconvolution results should be the closest to the Cytof per patient across patients  ) <br/>
 	Options : <br/>
