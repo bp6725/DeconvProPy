@@ -3,7 +3,7 @@ EconvProPy
 This project is for internal usage of the Shan-Orr lab at the Technion.
 
 *Notice :<br/>
-1) This project doesn't contain the raw data given the GIT storage limitations.<br/>
+1) This project doesn't contain the raw data because of the GIT storage limitations.<br/>
 2) This project meant to be generic, you can add any algorithm to the pipe, just try to inherit from the right classes and pandas api extensions<br/>
 3) The pipeline is *highly" cached. We have - 1) Tree cash - each "leaf" in the execution DAG is cached based on its predecessor and their params (that is, a small change in the higher leaves will make everything run again ). 2) E2E cache. <br/>
 4) Some methods require an external process for running R code, so you need R on your pc.<br/>
